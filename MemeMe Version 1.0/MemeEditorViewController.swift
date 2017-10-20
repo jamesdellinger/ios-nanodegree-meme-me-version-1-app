@@ -95,16 +95,23 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
 
     // MARK: Picking an image
     @IBAction func pickAnImage(_ sender: Any) {
-        let imagePicker = UIImagePickerController()
-        imagePicker.delegate = self
-        imagePicker.sourceType = .photoLibrary
-        present(imagePicker, animated: true, completion: nil)
+        presentImagePicker(sourceType: .photoLibrary)
     }
     
     @IBAction func pickAnImageFromCamera(_ sender: Any) {
+        presentImagePicker(sourceType: .camera)
+    }
+    
+    // Present the proper image picker, depending on whether user chose
+    // camera or photo library
+    func presentImagePicker(sourceType: UIImagePickerControllerSourceType) {
         let imagePicker = UIImagePickerController()
         imagePicker.delegate = self
-        imagePicker.sourceType = .camera
+        if sourceType == .photoLibrary {
+            imagePicker.sourceType = .photoLibrary
+        } else {
+            imagePicker.sourceType = .camera
+        }
         present(imagePicker, animated: true, completion: nil)
     }
     
