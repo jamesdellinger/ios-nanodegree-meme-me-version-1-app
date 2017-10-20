@@ -62,16 +62,6 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Print out all fonts available to app in console
-        for family: String in UIFont.familyNames
-        {
-            print("\(family)")
-            for names: String in UIFont.fontNames(forFamilyName: family)
-            {
-                print("== \(names)")
-            }
-        }
-        
         // Set the placeholder text for each text field
         topTextField.text = "TOP"
         bottomTextField.text = "BOTTOM"

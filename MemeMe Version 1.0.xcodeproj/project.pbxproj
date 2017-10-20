@@ -16,7 +16,6 @@
 		1ABF16151F6DFA0F0007790B /* Meme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABF16141F6DFA0F0007790B /* Meme.swift */; };
 		1AE108D61F972313002C895A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AE108D41F972313002C895A /* LaunchScreen.xib */; };
 		1AE108DC1F99B229002C895A /* impact.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1AE108DB1F99B20E002C895A /* impact.ttf */; };
-		1AE108E11F99BB7C002C895A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AE108E01F99BB7C002C895A /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +30,6 @@
 		1ABF16141F6DFA0F0007790B /* Meme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meme.swift; sourceTree = "<group>"; };
 		1AE108D51F972313002C895A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		1AE108DB1F99B20E002C895A /* impact.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = impact.ttf; sourceTree = "<group>"; };
-		1AE108E01F99BB7C002C895A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,7 +46,6 @@
 		1A3CE4791F688D9D0084640D = {
 			isa = PBXGroup;
 			children = (
-				1AE108E01F99BB7C002C895A /* Default-568h@2x.png */,
 				1A3CE4841F688D9D0084640D /* MemeMe Version 1.0 */,
 				1A3CE4831F688D9D0084640D /* Products */,
 			);
@@ -70,8 +67,8 @@
 				1A3CE4851F688D9D0084640D /* AppDelegate.swift */,
 				1A3CE4871F688D9D0084640D /* MemeEditorViewController.swift */,
 				1ABF16141F6DFA0F0007790B /* Meme.swift */,
-				1AE108DA1F99B18D002C895A /* Resources */,
 				1A3CE4971F69E8270084640D /* Text Field Delegates */,
+				1AE108DA1F99B18D002C895A /* Resources */,
 				1A3CE48C1F688D9D0084640D /* Assets.xcassets */,
 				1A3CE4911F688D9D0084640D /* Info.plist */,
 				1AE108D41F972313002C895A /* LaunchScreen.xib */,
@@ -158,7 +155,6 @@
 				1AE108DC1F99B229002C895A /* impact.ttf in Resources */,
 				1A3CE48D1F688D9D0084640D /* Assets.xcassets in Resources */,
 				1AE108D61F972313002C895A /* LaunchScreen.xib in Resources */,
-				1AE108E11F99BB7C002C895A /* Default-568h@2x.png in Resources */,
 				1A3CE48B1F688D9D0084640D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
