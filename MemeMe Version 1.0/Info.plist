@@ -29,11 +29,11 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>Permission required to save memes to your photo library.</string>
+	<string>Permission to save memes to your photo library.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Permission required to access the photos in your library.</string>
+	<string>Permission to access the photos in your library.</string>
 	<key>NSCameraUsageDescription</key>
-	<string>Permission required to use your phone&apos;s camera.</string>
+	<string>Permission to use your phone&apos;s camera.</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>

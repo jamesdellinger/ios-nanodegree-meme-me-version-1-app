@@ -273,7 +273,17 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     @IBAction func shareImage(_ sender: Any) {
         let image = generateMemedImage()
         let activityController = UIActivityViewController(activityItems: [image], applicationActivities: nil)
-        self.present(activityController, animated: true, completion: {self.saveMeme()})
+        // Present the activity controller
+        //self.present(activityController, animated: true, completion: {self.saveMeme()})
+        self.present(activityController, animated: true, completion: nil)
+        
+        // If user completes an activity inside activity controller, such as sharing,
+        // then go ahead and save the meme
+        activityController.completionWithItemsHandler = {(activityType: UIActivityType?, completed:Bool, returnedItems:[Any]?, error: Error?) in
+            if completed {
+                self.saveMeme()
+            }
+        }
     }
 }
 
