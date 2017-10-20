@@ -46,9 +46,8 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     @IBOutlet weak var bottomTextFieldLeadingWidthConstraint: NSLayoutConstraint!
     @IBOutlet weak var bottomTextFieldTrailingWidthConstraint: NSLayoutConstraint!
     
-    // MARK: Text Field Delegate objects
-    let topTextFieldDelegate = TextFieldDelegate()
-    let bottomTextFieldDelegate = TextFieldDelegate()
+    // MARK: Text Field Delegate object
+    let textFieldDelegate = TextFieldDelegate()
 
     // MARK: meme text attributes dictionary
     let memeTextAttributes:[String:Any] = [
@@ -59,6 +58,18 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     ]
     
     // MARK: Set properties for both text fields
+    func configureTextField(textField: UITextField) {
+        // Ensure text font and color are displayed according our specifications
+        textField.defaultTextAttributes = memeTextAttributes
+        
+        // Set each text field's alignment to center
+        textField.textAlignment = .center
+        
+        // Ensure each text field's font size shrinks to fit
+        textField.adjustsFontSizeToFitWidth = true
+        textField.minimumFontSize = 12
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -66,23 +77,13 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         topTextField.text = "TOP"
         bottomTextField.text = "BOTTOM"
         
-        // Ensure text font and color are displayed according our specifications
-        topTextField.defaultTextAttributes = memeTextAttributes
-        bottomTextField.defaultTextAttributes = memeTextAttributes
-        
-        // Set each text field's alignment to center
-        topTextField.textAlignment = .center
-        bottomTextField.textAlignment = .center
-        
-        // Ensure each text field's font size shrinks to fit
-        topTextField.adjustsFontSizeToFitWidth = true
-        topTextField.minimumFontSize = 12
-        bottomTextField.adjustsFontSizeToFitWidth = true
-        bottomTextField.minimumFontSize = 12
+        // Configure alignment and formatting attributes for each text field
+        configureTextField(textField: topTextField)
+        configureTextField(textField: bottomTextField)
         
         // Set the two text field delegates
-        self.topTextField.delegate = topTextFieldDelegate
-        self.bottomTextField.delegate = bottomTextFieldDelegate
+        self.topTextField.delegate = textFieldDelegate
+        self.bottomTextField.delegate = textFieldDelegate
         
         // Share button starts off disabled. Will enable it upon selecting an image
         shareButton.isEnabled = false
