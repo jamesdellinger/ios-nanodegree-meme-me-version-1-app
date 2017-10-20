@@ -47,8 +47,8 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     @IBOutlet weak var bottomTextFieldTrailingWidthConstraint: NSLayoutConstraint!
     
     // MARK: Text Field Delegate objects
-    let topTextFieldDelegate = TopTextFieldDelegate()
-    let bottomTextFieldDelegate = BottomTextFieldDelegate()
+    let topTextFieldDelegate = TextFieldDelegate()
+    let bottomTextFieldDelegate = TextFieldDelegate()
 
     // MARK: meme text attributes dictionary
     let memeTextAttributes:[String:Any] = [
